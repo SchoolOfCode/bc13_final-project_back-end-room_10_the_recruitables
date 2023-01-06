@@ -10,6 +10,6 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.static("public"));
-app.use("/api", usersRouter);
+app.use("/api/users", usersRouter);
 
-export default app ;
+export default app;
