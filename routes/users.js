@@ -8,6 +8,7 @@ import {
   createUser,
   deleteUserById,
   updateUserScore,
+  getUserByEmail,
 } from "../models/users.js";
 
 // //We have to write our CRUD routes
@@ -37,6 +38,12 @@ usersRouter.post("/", async function (req, res) {
 usersRouter.post("/:id", async function (req, res) {
   const result = await updateUserScore(req.params.id, req.body.total_score);
   res.status(201).json({ success: true, payload: result });
+});
+
+//get user data by email
+usersRouter.get("/email/:email", async function (req, res) {
+  const result = await getUserByEmail(req.params.email);
+  return res.status(200).json({ success: true, payload: result });
 });
 
 //delete
