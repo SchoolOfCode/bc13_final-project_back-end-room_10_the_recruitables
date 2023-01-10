@@ -14,10 +14,10 @@ export async function getUserById(id) {
 }
 
 // create user
-export async function createUser(updatedUser) {
+export async function createUser(newUsers) {
   const newUser = await query(
     "INSERT INTO users (email, total_score) VALUES ($1, $2) RETURNING *",
-    [updatedUser.email, updatedUser.score]
+    [newUsers.email, newUsers.total_score]
   );
   return newUser.rows[0];
 }
