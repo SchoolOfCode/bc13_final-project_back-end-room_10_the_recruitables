@@ -6,9 +6,8 @@ import {
   getAllUsers,
   getUserById,
   createUser,
-  //   updateUserById,
   deleteUserById,
-  updateUserScoreByEmail,
+  updateUserScore,
 } from "../models/users.js";
 
 // //We have to write our CRUD routes
@@ -19,28 +18,25 @@ usersRouter.get("/", async function (req, res) {
   //   return res.json({ success: true, payload: result });
   // }
   const result = await getAllUsers();
-  res.json({ success: true, payload: result });
+  res.status(200).json({ success: true, payload: result });
 });
 
 //get by id
 usersRouter.get("/:id", async function (req, res) {
   const result = await getUserById(req.params.id);
-  return res.json({ success: true, payload: result });
+  res.status(200).json({ success: true, payload: result });
 });
 
-//post
+//post new user
 usersRouter.post("/", async function (req, res) {
   const result = await createUser(req.body);
-  res.json({ success: true, payload: result });
+  res.status(201).json({ success: true, payload: result });
 });
 
-//   //update
-usersRouter.patch("/:id", async function (req, res) {
-  const result = await updateUserScoreByEmail(
-    req.params.id,
-    req.body.total_score
-  );
-  res.json({ success: true, payload: result });
+//update score
+usersRouter.post("/:id", async function (req, res) {
+  const result = await updateUserScore(req.params.id, req.body.total_score);
+  res.status(201).json({ success: true, payload: result });
 });
 
 //delete

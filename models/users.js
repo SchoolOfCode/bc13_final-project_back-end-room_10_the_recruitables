@@ -45,12 +45,14 @@ export async function createUser(updatedUser) {
 //   return update.rows;
 // }
 
-// update userScore
-export async function updateUserScoreByEmail(id, updatedUser) {
-  const update = await query("UPDATE users SET total_score= $1 WHERE id = $2", [
-    updatedUser.total_score,
-    id,
-  ]);
+//update userScore
+
+export async function updateUserScore(id, score) {
+  const update = await query(
+    `UPDATE users SET total_score= ($1+total_score) WHERE id = $2 RETURNING *`,
+    [score, id]
+  );
+  console.log(update.rows);
   return update.rows;
 }
 
