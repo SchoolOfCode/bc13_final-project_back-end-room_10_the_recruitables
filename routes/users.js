@@ -5,7 +5,7 @@ export const usersRouter = express.Router();
 import {
   getAllUsers,
   getUserById,
-  createUser,
+  // createUser,
   deleteUserById,
   updateUserScore,
   getUserByEmail,

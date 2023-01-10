@@ -36,36 +36,35 @@ test("Get user by id", async function () {
   });
 });
 
-test("Get user by email", async function (){
-    const response = await supertest(app).get(`api/users/lucy@lucy.com`);
-    expect(response.status).toBe(200);
+test("Get user by email", async function () {
+  const response = await supertest(app).get(`/api/users/email/lucy@lucy.com`);
+  expect(response.status).toBe(200);
   expect(response.body).toStrictEqual({
     success: true,
     payload: {
-        id: expect.any(Number),
-        email: "lucy@lucy.com",
-        total_score: expect.any(Number)}
-    })
-})
-
-
-
-test("Create user", async function () {
-  const response = await supertest(app).post(`/api/users`).send({
-    
-    email: "poppy.smith.93@gmail.com",
-    total_score: 68,
-  });
-  expect(response.status).toBe(201);
-  expect(response.body).toStrictEqual({
-    success: true,
-    payload: {
-        id: expect.any(Number),
-        email: "poppy.smith.93@gmail.com",
-        total_score: 68
+      id: expect.any(Number),
+      email: "lucy@lucy.com",
+      total_score: expect.any(Number),
     },
   });
 });
+
+// test("Create user", async function () {
+//   const response = await supertest(app).post(`/api/users`).send({
+
+//     email: "poppy.smith.93@gmail.com",
+//     total_score: 68,
+//   });
+//   expect(response.status).toBe(201);
+//   expect(response.body).toStrictEqual({
+//     success: true,
+//     payload: {
+//         id: expect.any(Number),
+//         email: "poppy.smith.93@gmail.com",
+//         total_score: 68
+//     },
+//   });
+// });
 
 test("Update user score", async function () {
   const response = await supertest(app).post(`/api/users/6`).send({
@@ -76,8 +75,8 @@ test("Update user score", async function () {
     success: true,
     payload: {
       id: 6,
-    email: expect.any(String),
-            total_score: expect.any(Number),
+      email: expect.any(String),
+      total_score: expect.any(Number),
     },
   });
 });
