@@ -14,36 +14,29 @@ export async function getUserById(id) {
 }
 
 //  // create user
-export async function createUser(updatedUser) {
-  const newUser = await query(
-    "INSERT INTO users (name, email, password, avatar_bottom, avatar_middle, avatar_top) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-    [
-      updatedUser.name,
-      updatedUser.email,
-      updatedUser.password,
-      updatedUser.avatar_bottom,
-      updatedUser.avatar_middle,
-      updatedUser.avatar_top,
-    ]
-  );
-  return newUser.rows;
-}
-
-// // Update user by id
-// export async function updateUserById(id, updatedUser) {
-//   const update = await query(
-//     "UPDATE users SET name = $1, email = $2, avatar_bottom = $4, avatar_middle = $5, avatar_top= $6 WHERE id = $3",
+// export async function createUser(updatedUser) {
+//   const newUser = await query(
+//     "INSERT INTO users (name, email, password, avatar_bottom, avatar_middle, avatar_top) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
 //     [
 //       updatedUser.name,
 //       updatedUser.email,
-//       id,
+//       updatedUser.password,
 //       updatedUser.avatar_bottom,
 //       updatedUser.avatar_middle,
 //       updatedUser.avatar_top,
 //     ]
 //   );
-//   return update.rows;
-// }
+//   return newUser.rows;
+//}
+
+//get user by email
+export async function getUserByEmail(email) {
+  console.log(email);
+  const userByEmail = await query("SELECT * FROM users WHERE email = $1", [
+    email,
+  ]);
+  return userByEmail.rows[0];
+}
 
 //update userScore
 
@@ -53,7 +46,7 @@ export async function updateUserScore(id, score) {
     [score, id]
   );
   console.log(update.rows);
-  return update.rows;
+  return update.rows[0];
 }
 
 // //Delete a user
