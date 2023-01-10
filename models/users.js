@@ -13,21 +13,14 @@ export async function getUserById(id) {
   return userByID.rows[0];
 }
 
-//  // create user
-// export async function createUser(updatedUser) {
-//   const newUser = await query(
-//     "INSERT INTO users (name, email, password, avatar_bottom, avatar_middle, avatar_top) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-//     [
-//       updatedUser.name,
-//       updatedUser.email,
-//       updatedUser.password,
-//       updatedUser.avatar_bottom,
-//       updatedUser.avatar_middle,
-//       updatedUser.avatar_top,
-//     ]
-//   );
-//   return newUser.rows;
-//}
+// create user
+export async function createUser(newUsers) {
+  const newUser = await query(
+    "INSERT INTO users (email, total_score) VALUES ($1, $2) RETURNING *",
+    [newUsers.email, newUsers.total_score]
+  );
+  return newUser.rows[0];
+}
 
 //get user by email
 export async function getUserByEmail(email) {
