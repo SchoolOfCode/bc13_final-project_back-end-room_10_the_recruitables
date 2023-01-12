@@ -5,16 +5,17 @@ export async function createAllTables() {
     `CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
             email VARCHAR,
+            name VARCHAR,
             total_score INT
          );
          INSERT INTO users
-            (email, total_score)
-         VALUES ('lucy@lucy.com', 54),
-         ('seb@seb.com', 48),
-         ('jeremy@jeremy.com', 53),
-         ('louis@louis.com', 55),
-         ('emily@emily.com', 46),
-         ('jason@jason.com', 104);`
+            (email,name, total_score)
+         VALUES ('lucy@lucy.com', 'Lucy', 54),
+         ('seb@seb.com', 'Seb', 48),
+         ('jeremy@jeremy.com', 'Jeremy', 53),
+         ('louis@louis.com', 'Louis', 55),
+         ('emily@emily.com','Emily', 46),
+         ('jason@jason.com', 'Jason', 104);`
   );
 }
 

@@ -30,9 +30,11 @@ usersRouter.get("/:id", async function (req, res) {
 
 //post new user
 usersRouter.post("/", async function (req, res) {
+  console.log(req.body);
   const result = await createUser(req.body);
   res.status(201).json({ success: true, payload: result });
 });
+
 
 //update score
 usersRouter.post("/:id", async function (req, res) {
