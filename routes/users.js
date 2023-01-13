@@ -35,7 +35,6 @@ usersRouter.post("/", async function (req, res) {
   res.status(201).json({ success: true, payload: result });
 });
 
-
 //update score
 usersRouter.post("/:id", async function (req, res) {
   const result = await updateUserScore(req.params.id, req.body.total_score);
