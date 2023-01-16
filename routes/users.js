@@ -9,6 +9,8 @@ import {
   deleteUserById,
   updateUserScore,
   getUserByEmail,
+  getBodyAntHead,
+  patchBodyAntHead,
 } from "../models/users.js";
 
 // //We have to write our CRUD routes
@@ -52,5 +54,23 @@ usersRouter.delete("/:id", async function (req, res) {
   const result = await deleteUserById(req.params.id);
   res.json({ success: true, payload: result });
 });
+
+//get body, ant and head by email
+usersRouter.get("/bodyAntHead/:email", async function (req, res) {
+  const result = await getBodyAntHead(req.params.email);
+  res.status(200).json({ success: true, payload: result });
+});
+
+//patch body, ant and head by email
+usersRouter.patch("/bodyAntHead/:email", async function (req, res) {
+  const result = await patchBodyAntHead(
+    req.params.email,
+    req.body.bodyId,
+    req.body.antId,
+    req.body.headId
+  );
+  res.status(200).json({ success: true, payload: result });
+});
+
 
 export default usersRouter;
