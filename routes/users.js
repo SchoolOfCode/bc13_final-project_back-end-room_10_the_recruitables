@@ -56,13 +56,13 @@ usersRouter.delete("/:id", async function (req, res) {
 });
 
 //get body, ant and head by email
-usersRouter.get("/bodyAntHead/:email", async function (req, res) {
+usersRouter.get("/avatars/:email", async function (req, res) {
   const result = await getBodyAntHead(req.params.email);
   res.status(200).json({ success: true, payload: result });
 });
 
 //patch body, ant and head by email
-usersRouter.patch("/bodyAntHead/:email", async function (req, res) {
+usersRouter.patch("/avatars/:email", async function (req, res) {
   const result = await patchBodyAntHead(
     req.params.email,
     req.body.bodyId,
