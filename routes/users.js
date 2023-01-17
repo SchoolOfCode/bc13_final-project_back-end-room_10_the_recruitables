@@ -67,7 +67,8 @@ usersRouter.patch("/avatars/:email", async function (req, res) {
     req.params.email,
     req.body.bodyId,
     req.body.antId,
-    req.body.headId
+    req.body.headId,
+    req.body.avColour
   );
   res.status(200).json({ success: true, payload: result });
 });
