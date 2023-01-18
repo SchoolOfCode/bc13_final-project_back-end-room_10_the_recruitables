@@ -43,17 +43,17 @@ export async function createAllTables() {
 
            INSERT INTO yearOneShapes
           (question_id, img_url, answer)
-          VALUES (1, '../images/Shapes/square.png', "square"),
-          (2, '../images/Shapes/circle.png', "circle"),
-          (3, '../images/Shapes/rectangle.png', "rectangle"),
-          (4, '../images/Shapes/hexagoni.png', "hexagon"),
-          (5, '../images/Shapes/hexagon.png', "hexagon"),
-          (6, '../images/Shapes/triangle.png', "triangle"),
-          (7, '../images/Shapes/square.png', "square"),
-          (8, '../images/Shapes/octagon.png', "octagon");
+          VALUES (1, '../images/Shapes/square.png', 'square'),
+          (2, '../images/Shapes/circle.png', 'circle'),
+          (3, '../images/Shapes/rectangle.png', 'rectangle'),
+          (4, '../images/Shapes/hexagoni.png', 'hexagon'),
+          (5, '../images/Shapes/hexagon.png', 'hexagon'),
+          (6, '../images/Shapes/triangle.png', 'triangle'),
+          (7, '../images/Shapes/square.png', 'square'),
+          (8, '../images/Shapes/octagon.png', 'octagon');
 
           CREATE TABLE IF NOT EXISTS yearOneCounters(
-            question_id INTEGER 
+            question_id INTEGER,
             img_url VARCHAR, 
             number INTEGER
            );

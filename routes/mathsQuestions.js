@@ -9,8 +9,8 @@ import {
 } from "../models/mathsQuestions.js";
 
 //get new number line
-mathsRouter.get("/:id", async function (req, res) {
-  const result = await getRandomNumberLineQ(req.params.id);
+mathsRouter.get("/numberLines", async function (req, res) {
+  const result = await getRandomNumberLineQ();
   res.status(200).json({ success: true, payload: result });
 });
 
