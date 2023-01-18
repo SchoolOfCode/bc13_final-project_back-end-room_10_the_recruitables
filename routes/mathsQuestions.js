@@ -6,7 +6,7 @@ import {
   getRandomNumberLineQ,
   getRandomShape,
   getStarCounter,
-} from "../models/mathsQuestions";
+} from "../models/mathsQuestions.js";
 
 //get new number line
 mathsRouter.get("/:id", async function (req, res) {
