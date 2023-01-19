@@ -29,15 +29,16 @@ export async function createAllTables() {
 
          INSERT INTO yearOneNumberLines
           (question_id, img_url, answer)
-          VALUES (1, '../images/NumberLines/2.png', 2),
-          (2, '../images/NumberLines/5.png', 5),
-          (3, '../images/NumberLines/10.png', 10),
-          (4, '../images/NumberLines/21.png', 21),
-          (5, '../images/NumberLines/30.png', 30),
-          (6, '../images/NumberLines/38.png', 38),
-          (7, '../images/NumberLines/52.png', 52),
-          (8, '../images/NumberLines/66.png', 66),
-          (9, '../images/NumberLines/78.png', 78);
+          VALUES (1, 'https://i.ibb.co/Mchz9rD/2.png', 2),
+          (2, 'https://i.ibb.co/p0RRKNP/5.png', 5),
+          (3, 'https://i.ibb.co/dbhcHv6/10.png', 10),
+          (4, 'https://i.ibb.co/R4WyJ07/21.png', 21),
+          (5, 'https://i.ibb.co/TtpyKSH/30.png', 30),
+          (6, 'https://i.ibb.co/R2hvxGh/38.png', 38),
+          (7, 'https://i.ibb.co/nP22D5g/52.png', 52),
+          (8, 'https://i.ibb.co/0js2Cfp/66.png', 66),
+          (9, 'https://i.ibb.co/BZBKyND/78.png', 78),
+          (10, 'https://i.ibb.co/pdtvxVn/90.png', 90);
 
           CREATE TABLE IF NOT EXISTS yearOneShapes(
             question_id INTEGER,
@@ -62,8 +63,8 @@ export async function createAllTables() {
             number INTEGER
            );
 
-           INSERT INTO yearOneShapes
-          (question_id, img_url, answer)
+           INSERT INTO yearOneCounters
+          (question_id, img_url, number)
           VALUES (1, '../images/StarCounters/one.png', 1),
           (2, '../images/StarCounters/two.png', 2),
           (3, '../images/StarCounters/three.png', 3),
@@ -79,7 +80,9 @@ export async function createAllTables() {
 }
 
 export async function dropAllTables() {
-  return await pool.query("DROP TABLE IF EXISTS users;");
+  return await pool.query(
+    "DROP TABLE IF EXISTS users, yearOneNumberLines, yearOneCounters, yearOneShapes;"
+  );
 }
 
 export async function resetAllTables() {
