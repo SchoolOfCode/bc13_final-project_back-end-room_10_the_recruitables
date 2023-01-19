@@ -38,8 +38,8 @@ usersRouter.post("/", async function (req, res) {
 });
 
 //update score
-usersRouter.post("/:id", async function (req, res) {
-  const result = await updateUserScore(req.params.id, req.body.total_score);
+usersRouter.post("/email/:email", async function (req, res) {
+  const result = await updateUserScore(req.body.total_score, req.params.email);
   res.status(201).json({ success: true, payload: result });
 });
 
@@ -72,6 +72,5 @@ usersRouter.patch("/avatars/:email", async function (req, res) {
   );
   res.status(200).json({ success: true, payload: result });
 });
-
 
 export default usersRouter;

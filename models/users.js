@@ -33,10 +33,10 @@ export async function getUserByEmail(email) {
 
 //update userScore
 
-export async function updateUserScore(id, score) {
+export async function updateUserScore(score, email) {
   const update = await query(
-    `UPDATE users SET total_score= ($1+total_score) WHERE id = $2 RETURNING *`,
-    [score, id]
+    `UPDATE users SET total_score= ($1+total_score) WHERE email = $2 RETURNING *`,
+    [score, email]
   );
   console.log(update.rows);
   return update.rows[0];
@@ -68,6 +68,3 @@ export async function patchBodyAntHead(email, bodyId, antId, headId, avColour) {
   );
   return patch.rows[0];
 }
-
-
-
