@@ -50,3 +50,24 @@ export async function deleteUserById(id) {
   );
   return deletedUser.rows[0];
 }
+
+// get body_id, ant_id and head_id from email
+export async function getBodyAntHead(email) {
+  const bodyAntHead = await query(
+    `SELECT bodyId, antId, headId, avColour FROM users WHERE email = $1`,
+    [email]
+  );
+  return bodyAntHead.rows[0];
+}
+
+// patchrequest for body, ant and head
+export async function patchBodyAntHead(email, bodyId, antId, headId, avColour) {
+  const patch = await query(
+    `UPDATE users SET bodyId = $1, antId = $2, headId = $3, avColour = $4  WHERE email = $5 RETURNING *`,
+    [bodyId, antId, headId, avColour, email]
+  );
+  return patch.rows[0];
+}
+
+
+
