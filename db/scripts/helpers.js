@@ -6,16 +6,20 @@ export async function createAllTables() {
             id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
             email VARCHAR,
             name VARCHAR,
-            total_score INT
+            total_score INT, 
+            headId INT, 
+            bodyId INT,
+            antId INT, 
+            avColour VARCHAR
          );
          INSERT INTO users
-            (email,name, total_score)
-         VALUES ('lucy@lucy.com', 'Lucy', 54),
-         ('seb@seb.com', 'Seb', 48),
-         ('jeremy@jeremy.com', 'Jeremy', 53),
-         ('louis@louis.com', 'Louis', 55),
-         ('emily@emily.com','Emily', 46),
-         ('jason@jason.com', 'Jason', 104);
+            (email,name, total_score, headId, bodyId, antId, avColour)
+         VALUES ('lucy@lucy.com', 'Lucy', 54, 1, 1, 1, '#85C214'),
+         ('seb@seb.com', 'Seb', 48, 1, 1, 1, '#85C214'),
+         ('jeremy@jeremy.com', 'Jeremy', 53, 1, 1, 1, '#85C214'),
+         ('louis@louis.com', 'Louis', 55, 1, 1, 1, '#85C214'),
+         ('emily@emily.com','Emily', 46, 1, 1, 1, '#85C214'),
+         ('jason@jason.com', 'Jason', 104, 1, 1, 1, '#85C214');
          
          CREATE TABLE IF NOT EXISTS yearOneNumberLines(
           question_id INTEGER,
