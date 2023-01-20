@@ -21,7 +21,7 @@ mathsRouter.get("/:id", async function (req, res) {
 });
 
 //get star counters
-mathsRouter.get("/:id", async function (req, res) {
-  const result = await getStarCounter(req.params.id);
+mathsRouter.get("/starsCounters", async function (req, res) {
+  const result = await getStarCounter();
   res.status(200).json({ success: true, payload: result });
 });
