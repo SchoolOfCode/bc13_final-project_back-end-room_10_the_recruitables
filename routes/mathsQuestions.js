@@ -25,3 +25,16 @@ mathsRouter.get("/:id", async function (req, res) {
   const result = await getStarCounter(req.params.id);
   res.status(200).json({ success: true, payload: result });
 });
+
+//get coins counting
+mathsRouter.get("/:id", async function (req, res) {
+  const result = await getCoinsCounting(req.params.id);
+  res.status(200).json({ success: true, payload: result });
+});
+
+//get coins place value
+mathsRouter.get("/:id", async function (req, res) {
+  const result = await getCoinsPlaceValue(req.params.id);
+  res.status(200).json({ success: true, payload: result });
+});
+

@@ -14,12 +14,12 @@ export async function createAllTables() {
          );
          INSERT INTO users
             (email,name, total_score, headId, bodyId, antId, avColour)
-         VALUES ('lucy@lucy.com', 'Lucy', 54, 1, 1, 1, '#85C214'),
-         ('seb@seb.com', 'Seb', 48, 1, 1, 1, '#85C214'),
-         ('jeremy@jeremy.com', 'Jeremy', 53, 1, 1, 1, '#85C214'),
-         ('louis@louis.com', 'Louis', 55, 1, 1, 1, '#85C214'),
-         ('emily@emily.com','Emily', 46, 1, 1, 1, '#85C214'),
-         ('jason@jason.com', 'Jason', 104, 1, 1, 1, '#85C214');
+         VALUES ('lucy@lucy.com', 'Lucy', 254, 1, 1, 1, '#85C214'),
+         ('seb@seb.com', 'Seb', 248, 1, 1, 1, '#85C214'),
+         ('jeremy@jeremy.com', 'Jeremy', 253, 1, 1, 1, '#85C214'),
+         ('louis@louis.com', 'Louis', 255, 1, 1, 1, '#85C214'),
+         ('emily@emily.com','Emily', 246, 1, 1, 1, '#85C214'),
+         ('jason@jason.com', 'Jason', 204, 1, 1, 1, '#85C214');
          
          CREATE TABLE IF NOT EXISTS yearOneNumberLines(
           question_id INTEGER,
@@ -74,6 +74,26 @@ export async function createAllTables() {
           (7, '../images/StarCounters/seven.png', 7),
           (8, '../images/StarCounters/eight.png', 8),
           (9, '../images/StarCounters/nine.png', 9);
+
+          CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting
+            (question_id, img_url, number)
+            VALUES (1, 'https://ibb.co/4fkprC8', 25),
+            (2, 'https://ibb.co/NjMvJyg', 60),
+            (3, 'https://ibb.co/Vm1mWGn', 30),
+            (4, 'https://ibb.co/k5Z2BjT', 10),
+            (5, 'https://ibb.co/NFP6dxx', 10),
+            (6, 'https://ibb.co/kGCNqRH', 6),
+            (7, 'https://ibb.co/rKhhCdq', 4);
+
+            CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue
+            (question_id, img_url, number)
+            (1, 'https://ibb.co/DRKfCK6', 45),
+            (2, 'https://ibb.co/M6c5kmq', 27),
+            (3, 'https://ibb.co/KXXLYpb', 25),
+            (4, 'https://ibb.co/Tr9s75f', 41),
+            (5, 'https://ibb.co/FxF6hpb', 42),
+            (6, 'https://ibb.co/PTvMmxJ', 34),
+            (7, 'https://ibb.co/3sQ0Rch', 21);
           
          `
   );

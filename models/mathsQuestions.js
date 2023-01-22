@@ -20,3 +20,23 @@ export async function getStarCounter(id) {
   );
   return counterQuestion.rows[0];
 }
+
+// yearr 2 games
+// counting in 2,5 and 10
+export async function getCoinsCounting(id) {
+  const coinsQuestion = await query(
+    "SELECT * FROM yearTwoCoinsCounting WHERE question_id = $1",
+    [id]
+  );
+  return coinsQuestion.rows[0];
+}
+
+// place value coins
+export async function getCoinsPlaceValue(id) {
+  const coinsQuestion = await query(
+    "SELECT * FROM yearTwoCoinsPlaceValue WHERE question_id = $1",
+    [id]
+  );
+  return coinsQuestion.rows[0];
+}
+
