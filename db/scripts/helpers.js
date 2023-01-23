@@ -87,13 +87,26 @@ export async function createAllTables() {
 
             CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue
             (question_id, img_url, number)
-            (1, 'https://ibb.co/DRKfCK6', 45),
+            VALUES (1, 'https://ibb.co/DRKfCK6', 45),
             (2, 'https://ibb.co/M6c5kmq', 27),
             (3, 'https://ibb.co/KXXLYpb', 25),
             (4, 'https://ibb.co/Tr9s75f', 41),
             (5, 'https://ibb.co/FxF6hpb', 42),
             (6, 'https://ibb.co/PTvMmxJ', 34),
             (7, 'https://ibb.co/3sQ0Rch', 21);
+
+            CREATE TABLE IF NOT EXISTS yearThreeFractions
+            (question_id, img_url, number)
+            VALUES (1, 'https://ibb.co/r4xRRB4', 25),
+            (2, 'https://ibb.co/z69R43g', 60),
+            (3, 'https://ibb.co/QMHcFb9', 30),
+            (4, 'https://ibb.co/XzFDz0S', 10),
+            (5, 'https://ibb.co/s1CWdt2', 10),
+            (6, 'https://ibb.co/7txmcpv', 6),
+            (7, 'https://ibb.co/Rzv9BMd', 4),
+            (7, 'https://ibb.co/GC6FjTy', 4),
+            (7, 'https://ibb.co/nf28Sp8', 4),
+            (7, 'https://ibb.co/nf28Sp8', 4);
           
          `
   );
