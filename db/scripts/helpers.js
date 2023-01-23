@@ -14,12 +14,12 @@ export async function createAllTables() {
          );
          INSERT INTO users
             (email,name, total_score, headId, bodyId, antId, avColour)
-         VALUES ('lucy@lucy.com', 'Lucy', 54, 1, 1, 1, '#85C214'),
-         ('seb@seb.com', 'Seb', 48, 1, 1, 1, '#85C214'),
-         ('jeremy@jeremy.com', 'Jeremy', 53, 1, 1, 1, '#85C214'),
-         ('louis@louis.com', 'Louis', 55, 1, 1, 1, '#85C214'),
-         ('emily@emily.com','Emily', 46, 1, 1, 1, '#85C214'),
-         ('jason@jason.com', 'Jason', 104, 1, 1, 1, '#85C214');
+         VALUES ('lucy@lucy.com', 'Lucy', 254, 1, 1, 1, '#85C214'),
+         ('seb@seb.com', 'Seb', 248, 1, 1, 1, '#85C214'),
+         ('jeremy@jeremy.com', 'Jeremy', 253, 1, 1, 1, '#85C214'),
+         ('louis@louis.com', 'Louis', 255, 1, 1, 1, '#85C214'),
+         ('emily@emily.com','Emily', 246, 1, 1, 1, '#85C214'),
+         ('jason@jason.com', 'Jason', 204, 1, 1, 1, '#85C214');
          
          CREATE TABLE IF NOT EXISTS yearOneNumberLines(
           question_id INTEGER,
@@ -39,41 +39,61 @@ export async function createAllTables() {
           (8, 'https://i.ibb.co/0js2Cfp/66.png', 66),
           (9, 'https://i.ibb.co/BZBKyND/78.png', 78),
           (10, 'https://i.ibb.co/pdtvxVn/90.png', 90);
+               
 
-          CREATE TABLE IF NOT EXISTS yearOneShapes(
-            question_id INTEGER,
-            img_url VARCHAR, 
-            answer VARCHAR
-           );
-
-           INSERT INTO yearOneShapes
-          (question_id, img_url, answer)
-          VALUES (1, '../images/Shapes/square.png', 'square'),
-          (2, '../images/Shapes/circle.png', 'circle'),
-          (3, '../images/Shapes/rectangle.png', 'rectangle'),
-          (4, '../images/Shapes/hexagoni.png', 'hexagon'),
-          (5, '../images/Shapes/hexagon.png', 'hexagon'),
-          (6, '../images/Shapes/triangle.png', 'triangle'),
-          (7, '../images/Shapes/square.png', 'square'),
-          (8, '../images/Shapes/octagon.png', 'octagon');
-
-          CREATE TABLE IF NOT EXISTS yearOneCounters(
+          CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting(
             question_id INTEGER,
             img_url VARCHAR, 
             number INTEGER
            );
 
-           INSERT INTO yearOneCounters
-          (question_id, img_url, number)
-          VALUES (1, '../images/StarCounters/one.png', 1),
-          (2, '../images/StarCounters/two.png', 2),
-          (3, '../images/StarCounters/three.png', 3),
-          (4, '../images/StarCounters/four.png', 4),
-          (5, '../images/StarCounters/five.png', 5),
-          (6, '../images/StarCounters/six.png', 6),
-          (7, '../images/StarCounters/seven.png', 7),
-          (8, '../images/StarCounters/eight.png', 8),
-          (9, '../images/StarCounters/nine.png', 9);
+          INSERT INTO yearTwoCoinsCounting
+            (question_id, img_url, number)
+            VALUES (1, 'https://i.ibb.co/JdZHJ8v/High-FI-Wireframes-13.png', 25),
+            (2, 'https://i.ibb.co/bBk0CKj/High-FI-Wireframes-14.png', 60),
+            (3, 'https://i.ibb.co/sHfHv4x/High-FI-Wireframes-10.png', 30),
+            (4, 'https://i.ibb.co/8Nkgsqw/High-FI-Wireframes-9.png', 10),
+            (5, 'https://i.ibb.co/TwSBxcc/High-FI-Wireframes-7.png', 10),
+            (6, 'https://i.ibb.co/ZfDqcnL/High-FI-Wireframes-6.png', 6),
+            (7, 'https://i.ibb.co/20rrDZR/High-FI-Wireframes-5.png', 4);
+
+            CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue(
+            question_id INTEGER,
+            img_url VARCHAR,
+            number INTEGER
+            );
+
+            INSERT INTO yearTwoCoinsPlaceValue
+            (question_id, img_url, number)
+            VALUES (1, 'https://i.ibb.co/mcz5qzY/High-FI-Wireframes-18.png', 45),
+            (2, 'https://i.ibb.co/rsxf2Vn/High-FI-Wireframes-17.png', 27),
+            (3, 'https://i.ibb.co/9NNVJkc/High-FI-Wireframes-16.png', 25),
+            (4, 'https://i.ibb.co/N7cMJzv/High-FI-Wireframes-15.png', 41),
+            (5, 'https://i.ibb.co/0Dxqn5j/High-FI-Wireframes-12.png', 42),
+            (6, 'https://i.ibb.co/yhcpf0K/High-FI-Wireframes-11.png', 34),
+            (7, 'https://i.ibb.co/RSdCjcH/High-FI-Wireframes-8.png', 21);
+
+            CREATE TABLE IF NOT EXISTS yearThreeFractions(
+            question_id INTEGER,
+            img_url VARCHAR,
+            number INTEGER  
+            );
+
+            INSERT INTO yearThreeFractions
+            (question_id, img_url, number)
+            VALUES (1, 'https://i.ibb.co/KF2pptF/1-2-10.png', 25),
+            (2, 'https://i.ibb.co/9ZKTrx0/1-3.png', 60),
+            (3, 'https://i.ibb.co/vkdBxw1/1-4.png', 30),
+            (4, 'https://i.ibb.co/NLWrLDZ/1-7.png', 10),
+            (5, 'https://i.ibb.co/Smcf4JP/1-8.png', 10),
+            (6, 'https://i.ibb.co/F4kTvY6/2-3.png', 6),
+            (7, 'https://i.ibb.co/Bqztr7F/2-5.png', 4),
+            (7, 'https://i.ibb.co/frgQ7vf/2-6.png', 4),
+            (7, 'https://i.ibb.co/rMPfJ9f/2-8.png', 4),
+            (7, 'https://i.ibb.co/rMPfJ9f/2-8.png', 4);
+          
+         `
+  );
           
          `
   );
@@ -81,7 +101,7 @@ export async function createAllTables() {
 
 export async function dropAllTables() {
   return await pool.query(
-    "DROP TABLE IF EXISTS users, yearOneNumberLines, yearOneCounters, yearOneShapes;"
+    "DROP TABLE IF EXISTS users, yearOneNumberLines, yearOneCounters, yearOneShapes, yearTwoCoinsCounting, yearTwoCoinsPlaceValue, yearThreeFractions;"
   );
 }
 
