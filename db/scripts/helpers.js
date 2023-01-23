@@ -77,13 +77,13 @@ export async function createAllTables() {
 
           CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting
             (question_id, img_url, number)
-            VALUES (1, 'https://ibb.co/4fkprC8', 25),
-            (2, 'https://ibb.co/NjMvJyg', 60),
-            (3, 'https://ibb.co/Vm1mWGn', 30),
-            (4, 'https://ibb.co/k5Z2BjT', 10),
-            (5, 'https://ibb.co/NFP6dxx', 10),
-            (6, 'https://ibb.co/kGCNqRH', 6),
-            (7, 'https://ibb.co/rKhhCdq', 4);
+            VALUES (1, 'https://i.ibb.co/JdZHJ8v/High-FI-Wireframes-13.png', 25),
+            (2, 'https://i.ibb.co/bBk0CKj/High-FI-Wireframes-14.png', 60),
+            (3, 'https://i.ibb.co/sHfHv4x/High-FI-Wireframes-10.png', 30),
+            (4, 'https://i.ibb.co/8Nkgsqw/High-FI-Wireframes-9.png', 10),
+            (5, 'https://i.ibb.co/TwSBxcc/High-FI-Wireframes-7.png', 10),
+            (6, 'https://i.ibb.co/ZfDqcnL/High-FI-Wireframes-6.png', 6),
+            (7, 'https://i.ibb.co/20rrDZR/High-FI-Wireframes-5.png', 4);
 
             CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue
             (question_id, img_url, number)
