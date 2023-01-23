@@ -39,41 +39,7 @@ export async function createAllTables() {
           (8, 'https://i.ibb.co/0js2Cfp/66.png', 66),
           (9, 'https://i.ibb.co/BZBKyND/78.png', 78),
           (10, 'https://i.ibb.co/pdtvxVn/90.png', 90);
-
-          CREATE TABLE IF NOT EXISTS yearOneShapes(
-            question_id INTEGER,
-            img_url VARCHAR, 
-            answer VARCHAR
-           );
-
-           INSERT INTO yearOneShapes
-          (question_id, img_url, answer)
-          VALUES (1, '../images/Shapes/square.png', 'square'),
-          (2, '../images/Shapes/circle.png', 'circle'),
-          (3, '../images/Shapes/rectangle.png', 'rectangle'),
-          (4, '../images/Shapes/hexagoni.png', 'hexagon'),
-          (5, '../images/Shapes/hexagon.png', 'hexagon'),
-          (6, '../images/Shapes/triangle.png', 'triangle'),
-          (7, '../images/Shapes/square.png', 'square'),
-          (8, '../images/Shapes/octagon.png', 'octagon');
-
-          CREATE TABLE IF NOT EXISTS yearOneCounters(
-            question_id INTEGER,
-            img_url VARCHAR, 
-            number INTEGER
-           );
-
-           INSERT INTO yearOneCounters
-          (question_id, img_url, number)
-          VALUES (1, '../images/StarCounters/one.png', 1),
-          (2, '../images/StarCounters/two.png', 2),
-          (3, '../images/StarCounters/three.png', 3),
-          (4, '../images/StarCounters/four.png', 4),
-          (5, '../images/StarCounters/five.png', 5),
-          (6, '../images/StarCounters/six.png', 6),
-          (7, '../images/StarCounters/seven.png', 7),
-          (8, '../images/StarCounters/eight.png', 8),
-          (9, '../images/StarCounters/nine.png', 9);
+               
 
           CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting(
             question_id INTEGER,
