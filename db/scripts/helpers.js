@@ -75,7 +75,13 @@ export async function createAllTables() {
           (8, '../images/StarCounters/eight.png', 8),
           (9, '../images/StarCounters/nine.png', 9);
 
-          CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting
+          CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting(
+            question_id INTEGER,
+            img_url VARCHAR, 
+            number INTEGER
+           );
+
+          INSERT INTO yearTwoCoinsCounting
             (question_id, img_url, number)
             VALUES (1, 'https://i.ibb.co/JdZHJ8v/High-FI-Wireframes-13.png', 25),
             (2, 'https://i.ibb.co/bBk0CKj/High-FI-Wireframes-14.png', 60),
@@ -85,7 +91,13 @@ export async function createAllTables() {
             (6, 'https://i.ibb.co/ZfDqcnL/High-FI-Wireframes-6.png', 6),
             (7, 'https://i.ibb.co/20rrDZR/High-FI-Wireframes-5.png', 4);
 
-            CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue
+            CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue(
+            question_id INTEGER,
+            img_url VARCHAR,
+            number INTEGER
+            );
+
+            INSERT INTO yearTwoCoinsPlaceValue
             (question_id, img_url, number)
             VALUES (1, 'https://ibb.co/DRKfCK6', 45),
             (2, 'https://ibb.co/M6c5kmq', 27),
@@ -95,7 +107,13 @@ export async function createAllTables() {
             (6, 'https://ibb.co/PTvMmxJ', 34),
             (7, 'https://ibb.co/3sQ0Rch', 21);
 
-            CREATE TABLE IF NOT EXISTS yearThreeFractions
+            CREATE TABLE IF NOT EXISTS yearThreeFractions(
+            question_id INTEGER,
+            img_url VARCHAR,
+            number INTEGER  
+            );
+
+            INSERT INTO yearThreeFractions
             (question_id, img_url, number)
             VALUES (1, 'https://ibb.co/r4xRRB4', 25),
             (2, 'https://ibb.co/z69R43g', 60),
@@ -114,7 +132,7 @@ export async function createAllTables() {
 
 export async function dropAllTables() {
   return await pool.query(
-    "DROP TABLE IF EXISTS users, yearOneNumberLines, yearOneCounters, yearOneShapes;"
+    "DROP TABLE IF EXISTS users, yearOneNumberLines, yearOneCounters, yearOneShapes, yearTwoCoinsCounting, yearTwoCoinsPlaceValue, yearThreeFractions;"
   );
 }
 
