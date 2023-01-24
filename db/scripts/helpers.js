@@ -77,36 +77,36 @@ export async function createAllTables() {
 
           CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting
             (question_id, img_url, number)
-            VALUES (1, 'https://i.ibb.co/JdZHJ8v/High-FI-Wireframes-13.png', 25),
-            (2, 'https://i.ibb.co/bBk0CKj/High-FI-Wireframes-14.png', 60),
-            (3, 'https://i.ibb.co/sHfHv4x/High-FI-Wireframes-10.png', 30),
-            (4, 'https://i.ibb.co/8Nkgsqw/High-FI-Wireframes-9.png', 10),
-            (5, 'https://i.ibb.co/TwSBxcc/High-FI-Wireframes-7.png', 10),
-            (6, 'https://i.ibb.co/ZfDqcnL/High-FI-Wireframes-6.png', 6),
-            (7, 'https://i.ibb.co/20rrDZR/High-FI-Wireframes-5.png', 4);
+            VALUES (1, 'https://i.ibb.co/wzWwTjH/High-FI-Wireframes-13.png', 25),
+            (2, 'https://i.ibb.co/vVy3T8z/High-FI-Wireframes-14.png', 60),
+            (3, 'https://i.ibb.co/0h1c8Xh/High-FI-Wireframes-10.png', 30),
+            (4, 'https://i.ibb.co/N7cG23j/High-FI-Wireframes-9.png', 10),
+            (5, 'https://i.ibb.co/YyvLNQB/High-FI-Wireframes-7.png', 10),
+            (6, 'https://i.ibb.co/JFccwGN/High-FI-Wireframes-6.png', 6),
+            (7, 'https://i.ibb.co/yVgj8d6/High-FI-Wireframes-5.png', 4);
 
             CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue
             (question_id, img_url, number)
-            VALUES (1, 'https://ibb.co/DRKfCK6', 45),
-            (2, 'https://ibb.co/M6c5kmq', 27),
-            (3, 'https://ibb.co/KXXLYpb', 25),
-            (4, 'https://ibb.co/Tr9s75f', 41),
-            (5, 'https://ibb.co/FxF6hpb', 42),
-            (6, 'https://ibb.co/PTvMmxJ', 34),
-            (7, 'https://ibb.co/3sQ0Rch', 21);
+            VALUES (1, 'https://i.ibb.co/MnJZbDj/High-FI-Wireframes-18.png', 45),
+            (2, 'https://i.ibb.co/L9WDJmT/High-FI-Wireframes-17.png', 27),
+            (3, 'https://i.ibb.co/ZxwV9Q1/High-FI-Wireframes-16.png', 25),
+            (4, 'https://i.ibb.co/PC7Yb43/High-FI-Wireframes-15.png', 41),
+            (5, 'https://i.ibb.co/QCqfPjx/High-FI-Wireframes-12.png', 42),
+            (6, 'https://i.ibb.co/pWJFLmJ/High-FI-Wireframes-11.png', 34),
+            (7, 'https://i.ibb.co/6mW9fw6/High-FI-Wireframes-8.png', 21);
 
             CREATE TABLE IF NOT EXISTS yearThreeFractions
             (question_id, img_url, number)
-            VALUES (1, 'https://ibb.co/r4xRRB4', 25),
-            (2, 'https://ibb.co/z69R43g', 60),
-            (3, 'https://ibb.co/QMHcFb9', 30),
-            (4, 'https://ibb.co/XzFDz0S', 10),
-            (5, 'https://ibb.co/s1CWdt2', 10),
-            (6, 'https://ibb.co/7txmcpv', 6),
-            (7, 'https://ibb.co/Rzv9BMd', 4),
-            (7, 'https://ibb.co/GC6FjTy', 4),
-            (7, 'https://ibb.co/nf28Sp8', 4),
-            (7, 'https://ibb.co/nf28Sp8', 4);
+            VALUES (1, 'https://i.ibb.co/KF2pptF/1-2-10.png', 25),
+            (2, 'https://i.ibb.co/9ZKTrx0/1-3.png', 60),
+            (3, 'https://i.ibb.co/vkdBxw1/1-4.png', 30),
+            (4, 'https://i.ibb.co/NLWrLDZ/1-7.png', 10),
+            (5, 'https://i.ibb.co/Smcf4JP/1-8.png', 10),
+            (6, 'https://i.ibb.co/F4kTvY6/2-3.png', 6),
+            (7, 'https://i.ibb.co/Bqztr7F/2-5.png', 4),
+            (7, 'https://i.ibb.co/frgQ7vf/2-6.png', 4),
+            (7, 'https://i.ibb.co/rMPfJ9f/2-8.png', 4),
+            (7, 'https://i.ibb.co/rMPfJ9f/2-8.png', 4);
           
          `
   );
