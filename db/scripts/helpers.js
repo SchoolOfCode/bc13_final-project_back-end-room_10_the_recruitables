@@ -39,43 +39,15 @@ export async function createAllTables() {
           (8, 'https://i.ibb.co/0js2Cfp/66.png', 66),
           (9, 'https://i.ibb.co/BZBKyND/78.png', 78),
           (10, 'https://i.ibb.co/pdtvxVn/90.png', 90);
+               
 
-          CREATE TABLE IF NOT EXISTS yearOneShapes(
-            question_id INTEGER,
-            img_url VARCHAR, 
-            answer VARCHAR
-           );
-
-           INSERT INTO yearOneShapes
-          (question_id, img_url, answer)
-          VALUES (1, '../images/Shapes/square.png', 'square'),
-          (2, '../images/Shapes/circle.png', 'circle'),
-          (3, '../images/Shapes/rectangle.png', 'rectangle'),
-          (4, '../images/Shapes/hexagoni.png', 'hexagon'),
-          (5, '../images/Shapes/hexagon.png', 'hexagon'),
-          (6, '../images/Shapes/triangle.png', 'triangle'),
-          (7, '../images/Shapes/square.png', 'square'),
-          (8, '../images/Shapes/octagon.png', 'octagon');
-
-          CREATE TABLE IF NOT EXISTS yearOneCounters(
+          CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting(
             question_id INTEGER,
             img_url VARCHAR, 
             number INTEGER
            );
 
-           INSERT INTO yearOneCounters
-          (question_id, img_url, number)
-          VALUES (1, '../images/StarCounters/one.png', 1),
-          (2, '../images/StarCounters/two.png', 2),
-          (3, '../images/StarCounters/three.png', 3),
-          (4, '../images/StarCounters/four.png', 4),
-          (5, '../images/StarCounters/five.png', 5),
-          (6, '../images/StarCounters/six.png', 6),
-          (7, '../images/StarCounters/seven.png', 7),
-          (8, '../images/StarCounters/eight.png', 8),
-          (9, '../images/StarCounters/nine.png', 9);
-
-          CREATE TABLE IF NOT EXISTS yearTwoCoinsCounting
+          INSERT INTO yearTwoCoinsCounting
             (question_id, img_url, number)
             VALUES (1, 'https://i.ibb.co/wzWwTjH/High-FI-Wireframes-13.png', 25),
             (2, 'https://i.ibb.co/vVy3T8z/High-FI-Wireframes-14.png', 60),
@@ -85,8 +57,15 @@ export async function createAllTables() {
             (6, 'https://i.ibb.co/JFccwGN/High-FI-Wireframes-6.png', 6),
             (7, 'https://i.ibb.co/yVgj8d6/High-FI-Wireframes-5.png', 4);
 
-            CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue
+            CREATE TABLE IF NOT EXISTS yearTwoCoinsPlaceValue(
+            question_id INTEGER,
+            img_url VARCHAR,
+            number INTEGER
+            );
+
+            INSERT INTO yearTwoCoinsPlaceValue
             (question_id, img_url, number)
+
             VALUES (1, 'https://i.ibb.co/MnJZbDj/High-FI-Wireframes-18.png', 45),
             (2, 'https://i.ibb.co/L9WDJmT/High-FI-Wireframes-17.png', 27),
             (3, 'https://i.ibb.co/ZxwV9Q1/High-FI-Wireframes-16.png', 25),
@@ -95,7 +74,14 @@ export async function createAllTables() {
             (6, 'https://i.ibb.co/pWJFLmJ/High-FI-Wireframes-11.png', 34),
             (7, 'https://i.ibb.co/6mW9fw6/High-FI-Wireframes-8.png', 21);
 
-            CREATE TABLE IF NOT EXISTS yearThreeFractions
+            CREATE TABLE IF NOT EXISTS yearThreeFractions(
+            question_id INTEGER,
+            img_url VARCHAR,
+            number INTEGER  
+            );
+
+
+            INSERT INTO yearThreeFractions
             (question_id, img_url, number)
             VALUES (1, 'https://i.ibb.co/KF2pptF/1-2-10.png', 25),
             (2, 'https://i.ibb.co/9ZKTrx0/1-3.png', 60),
@@ -106,15 +92,14 @@ export async function createAllTables() {
             (7, 'https://i.ibb.co/Bqztr7F/2-5.png', 4),
             (7, 'https://i.ibb.co/frgQ7vf/2-6.png', 4),
             (7, 'https://i.ibb.co/rMPfJ9f/2-8.png', 4),
-            (7, 'https://i.ibb.co/rMPfJ9f/2-8.png', 4);
-          
+            (7, 'https://i.ibb.co/rMPfJ9f/2-8.png', 4);         
          `
   );
 }
 
 export async function dropAllTables() {
   return await pool.query(
-    "DROP TABLE IF EXISTS users, yearOneNumberLines, yearOneCounters, yearOneShapes;"
+    "DROP TABLE IF EXISTS users, yearOneNumberLines, yearOneCounters, yearOneShapes, yearTwoCoinsCounting, yearTwoCoinsPlaceValue, yearThreeFractions;"
   );
 }
 
