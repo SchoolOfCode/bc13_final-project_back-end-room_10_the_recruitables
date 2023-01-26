@@ -4,6 +4,7 @@ export async function createAllTables() {
   return await pool.query(
     `CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+            year INT,
             email VARCHAR,
             name VARCHAR,
             total_score INT, 
@@ -13,13 +14,13 @@ export async function createAllTables() {
             avColour VARCHAR
          );
          INSERT INTO users
-            (email,name, total_score, headId, bodyId, antId, avColour)
-         VALUES ('lucy@lucy.com', 'Lucy', 254, 1, 1, 1, '#85C214'),
-         ('seb@seb.com', 'Seb', 248, 1, 1, 1, '#85C214'),
-         ('jeremy@jeremy.com', 'Jeremy', 253, 1, 1, 1, '#85C214'),
-         ('louis@louis.com', 'Louis', 255, 1, 1, 1, '#85C214'),
-         ('emily@emily.com','Emily', 246, 1, 1, 1, '#85C214'),
-         ('jason@jason.com', 'Jason', 204, 1, 1, 1, '#85C214');
+            (year, email, name, total_score, headId, bodyId, antId, avColour)
+         VALUES (1, 'lucy@lucy.com', 'Lucy', 254, 1, 1, 1, '#85C214'),
+         (2, 'seb@seb.com', 'Seb', 248, 1, 1, 1, '#85C214'),
+         (3, 'jeremy@jeremy.com', 'Jeremy', 253, 1, 1, 1, '#85C214'),
+         (4, 'louis@louis.com', 'Louis', 255, 1, 1, 1, '#85C214'),
+         (1, 'emily@emily.com','Emily', 246, 1, 1, 1, '#85C214'),
+         (2, 'jason@jason.com', 'Jason', 204, 1, 1, 1, '#85C214');
          
          CREATE TABLE IF NOT EXISTS yearOneNumberLines(
           question_id INTEGER,
