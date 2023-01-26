@@ -2,6 +2,7 @@ import { pool } from "../db/index";
 import supertest from "supertest";
 import app from "../app.js";
 
+
 afterAll(async function () {
   await pool.end();
 });
@@ -21,6 +22,10 @@ test("Get all users", async function () {
       email: expect.any(String),
       name: expect.any(String),
       total_score: expect.any(Number),
+      headId: expect.any(Number), 
+      bodyId: expect.any(Number),
+      antId: expect.any(Number),
+      avColour: expect.any(String)
     });
   }
 });
@@ -36,6 +41,10 @@ test("Get user by id", async function () {
       name: "Lucy",
       email: expect.any(String),
       total_score: expect.any(Number),
+      headId: expect.any(Number),
+      bodyId: expect.any(Number),
+      antId: expect.any(Number),
+      avColour: expect.any(String)
     },
   });
 });
@@ -51,15 +60,25 @@ test("Get user by email", async function () {
       name: "Lucy",
       email: "lucy@lucy.com",
       total_score: expect.any(Number),
+      headId: expect.any(Number),
+      bodyId: expect.any(Number),
+      antId: expect.any(Number),
+      avColour: expect.any(String)
     },
   });
 });
 
 test("Create user", async function () {
   const response = await supertest(app).post(`/api/users`).send({
+    year: 1,
     email: "poppy.smith.93@gmail.com",
     name: "Poppy",
     total_score: 300,
+    headId: 1,
+      bodyId: 1,
+      antId: 1,
+      avColour: "red"
+
   });
   expect(response.status).toBe(201);
   expect(response.body).toStrictEqual({
@@ -70,6 +89,11 @@ test("Create user", async function () {
       name: "Poppy",
       email: "poppy.smith.93@gmail.com",
       total_score: 300,
+      headId: 1,
+      bodyId: 1,
+      antId: 1,
+      avColour: "red"
+
     },
   });
 });
