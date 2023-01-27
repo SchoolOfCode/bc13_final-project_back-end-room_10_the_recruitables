@@ -8,19 +8,19 @@ export async function createAllTables() {
             email VARCHAR,
             name VARCHAR,
             total_score INT, 
-            headId INT, 
-            bodyId INT,
-            antId INT, 
-            avColour VARCHAR
+            headId INT DEFAULT 1, 
+            bodyId INT DEFAULT 1,
+            antId INT DEFAULT 1, 
+            avColour VARCHAR DEFAULT '#85C214'
          );
          INSERT INTO users
             (year, email, name, total_score, headId, bodyId, antId, avColour)
-         VALUES (1, 'lucy@lucy.com', 'Lucy', 254, 1, 1, 1, '#85C214'),
-         (2, 'seb@seb.com', 'Seb', 248, 1, 1, 1, '#85C214'),
-         (3, 'jeremy@jeremy.com', 'Jeremy', 253, 1, 1, 1, '#85C214'),
-         (4, 'louis@louis.com', 'Louis', 255, 1, 1, 1, '#85C214'),
-         (1, 'emily@emily.com','Emily', 246, 1, 1, 1, '#85C214'),
-         (2, 'jason@jason.com', 'Jason', 204, 1, 1, 1, '#85C214');
+         VALUES (1, 'lucy@lucy.com', 'Lucy', 74, 1, 1, 1, '#85C214'),
+         (2, 'seb@seb.com', 'Seb', 78, 1, 1, 1, '#85C214'),
+         (3, 'jeremy@jeremy.com', 'Jeremy', 73, 1, 1, 1, '#85C214'),
+         (4, 'louis@louis.com', 'Louis', 75, 1, 1, 1, '#85C214'),
+         (1, 'emily@emily.com','Emily', 76, 1, 1, 1, '#85C214'),
+         (2, 'jason@jason.com', 'Jason', 74, 1, 1, 1, '#85C214');
          
          CREATE TABLE IF NOT EXISTS yearOneNumberLines(
           question_id INTEGER,
