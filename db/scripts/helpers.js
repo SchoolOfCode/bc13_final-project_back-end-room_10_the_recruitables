@@ -8,10 +8,10 @@ export async function createAllTables() {
             email VARCHAR,
             name VARCHAR,
             total_score INT, 
-            headId INT, 
-            bodyId INT,
-            antId INT, 
-            avColour VARCHAR
+            headId INT DEFAULT 1, 
+            bodyId INT DEFAULT 1,
+            antId INT DEFAULT 1, 
+            avColour VARCHAR DEFAULT #85C214
          );
          INSERT INTO users
             (year, email, name, total_score, headId, bodyId, antId, avColour)
