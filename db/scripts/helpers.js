@@ -16,11 +16,11 @@ export async function createAllTables() {
          INSERT INTO users
             (year, email, name, total_score, headId, bodyId, antId, avColour)
          VALUES (1, 'lucy@lucy.com', 'Lucy', 254, 1, 1, 1, '#85C214'),
-         (2, 'seb@seb.com', 'Seb', 248, 1, 1, 1, '#85C214'),
-         (3, 'jeremy@jeremy.com', 'Jeremy', 253, 1, 1, 1, '#85C214'),
-         (4, 'louis@louis.com', 'Louis', 255, 1, 1, 1, '#85C214'),
-         (1, 'emily@emily.com','Emily', 246, 1, 1, 1, '#85C214'),
-         (2, 'jason@jason.com', 'Jason', 204, 1, 1, 1, '#85C214');
+         (2, 'seb@seb.com', 'Seb', 48, 1, 1, 1, '#85C214'),
+         (3, 'jeremy@jeremy.com', 'Jeremy', 53, 1, 1, 1, '#85C214'),
+         (4, 'louis@louis.com', 'Louis', 55, 1, 1, 1, '#85C214'),
+         (1, 'emily@emily.com','Emily', 46, 1, 1, 1, '#85C214'),
+         (2, 'jason@jason.com', 'Jason', 24, 1, 1, 1, '#85C214');
          
          CREATE TABLE IF NOT EXISTS yearOneNumberLines(
           question_id INTEGER,
